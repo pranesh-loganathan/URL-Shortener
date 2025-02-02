@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shortened URL</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+        .result { background: #f0f0f0; padding: 20px; margin: 20px 0; }
+    </style>
+</head>
+<body>
+    <h1>URL Shortened Successfully</h1>
+    <div class="result">
+        <p>Original URL: {{ original_url }}</p>
+        <p>Short URL: <a href="{{ short_url }}">{{ short_url }}</a></p>
+    </div>
+    <a href="/">Create Another</a>
+</body>
+</html>

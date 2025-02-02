@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>URL Shortener</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+        .form-group { margin: 20px 0; }
+        input[type="text"] { width: 100%; padding: 10px; font-size: 16px; }
+        button { background: #007bff; color: white; border: none; padding: 10px 20px; cursor: pointer; }
+        .error { color: red; }
+        .result { background: #f0f0f0; padding: 20px; margin: 20px 0; }
+    </style>
+</head>
+<body>
+    <h1>URL Shortener</h1>
+    {% if error %}<div class="error">{{ error }}</div>{% endif %}
+    <form method="POST">
+        <div class="form-group">
+            <input type="text" name="url" placeholder="Enter URL" required>
+        </div>
+        <div class="form-group">
+            <input type="text" name="custom_code" placeholder="Custom code (optional)">
+        </div>
+        <button type="submit">Shorten</button>
+    </form>
+</body>
+</html>
